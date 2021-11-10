@@ -51,18 +51,29 @@ class UploadVC: UIViewController , UIImagePickerControllerDelegate,UINavigationC
         let mediaFolder = strogeReference.child("media")
         
         if let data = imageView.image?.jpegData(compressionQuality: 0.5){
+            let uuid = UUID().uuidString
             
-            let imageReference = mediaFolder.child("image.jpg")
+            let imageReference = mediaFolder.child("\(uuid).jpg")
             imageReference.putData(data, metadata: nil) { metadata, error in
                 if error != nil {
-                    print(error?.localizedDescription)
+                    makeAlert(title: "Error", message: error?.localizedDescription ?? "error",self: self)
                 }
                 else{
                     imageReference.downloadURL { url, error in
                         if error == nil {
                             
                             let imageUrl = url?.absoluteString
-                            print(imageUrl)
+                            
+                            let firestoreDatabase = Firestore.firestore()
+                            var firestoreRefenrence : DocumentReference?
+                            let firestorePost = ["imageUrl" : imageUrl , "postedBy": Auth.auth().currentUser!.email,"postComment" : self.commitTextField.text!,"date":"date", "likes" : 0] as [String : Any]
+                            firestoreRefenrence = firestoreDatabase.collection("Posts").addDocument(data: firestorePost, completion: { error in
+                                if error != nil {
+                                    makeAlert(title: "error", message: error?.localizedDescription ?? "error", self: self)
+                                }
+                            })
+                            
+                          
                         }
                     }
                 }

@@ -18,6 +18,7 @@
 		FB002891273AA0B8003173E9 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB002890273AA0B8003173E9 /* FeedVC.swift */; };
 		FB002893273AA0C8003173E9 /* UploadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB002892273AA0C8003173E9 /* UploadVC.swift */; };
 		FB002895273AA0D9003173E9 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB002894273AA0D9003173E9 /* SettingsVC.swift */; };
+		FB002897273B0EDE003173E9 /* AlertFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB002896273B0EDE003173E9 /* AlertFunc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		FB002890273AA0B8003173E9 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		FB002892273AA0C8003173E9 /* UploadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVC.swift; sourceTree = "<group>"; };
 		FB002894273AA0D9003173E9 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		FB002896273B0EDE003173E9 /* AlertFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFunc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				FB002883273A8825003173E9 /* Assets.xcassets */,
 				FB002885273A8825003173E9 /* LaunchScreen.storyboard */,
 				FB002888273A8825003173E9 /* Info.plist */,
+				FB002896273B0EDE003173E9 /* AlertFunc.swift */,
 			);
 			path = InstaCloneFirebase;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				FB00287F273A8822003173E9 /* ViewController.swift in Sources */,
 				FB00287B273A8822003173E9 /* AppDelegate.swift in Sources */,
 				FB002893273AA0C8003173E9 /* UploadVC.swift in Sources */,
+				FB002897273B0EDE003173E9 /* AlertFunc.swift in Sources */,
 				FB00287D273A8822003173E9 /* SceneDelegate.swift in Sources */,
 				FB002895273AA0D9003173E9 /* SettingsVC.swift in Sources */,
 			);

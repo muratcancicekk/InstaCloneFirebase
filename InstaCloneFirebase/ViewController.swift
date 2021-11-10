@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     @IBAction func signButtonClicked(_ sender: Any) {
         if emailTextField.text != "" && passworTextField.text != "" {
             Auth.auth().signIn(withEmail: emailTextField.text!, password: passworTextField.text!) { authdata, error in
-                if error != nil {self.makeAlert(title: "Error", message: error!.localizedDescription )}
+                if error != nil {makeAlert(title: "Error", message: error!.localizedDescription ,self: self)}
                 else {
                     self.performSegue(withIdentifier: "toFeedVC", sender: nil)
                     
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         }
         
         else {
-            self.makeAlert(title: "Error", message: "Username/Password?" )
+            makeAlert(title: "Error", message: "Username/Password?",self: self )
            
         }
         
@@ -44,14 +44,14 @@ class ViewController: UIViewController {
         
     
     
-    func makeAlert(title:String,message:String){
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
-        alert.addAction(okButton)
-        self.present(alert, animated: true, completion: nil)
-        
-        
-    }
+ //   func makeAlert(title:String,message:String){
+ //       let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+ //       let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+ //       alert.addAction(okButton)
+ //       self.present(alert, animated: true, completion: nil)
+ //
+ //
+ //   }
         
         
     func singUpOparations(){
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
                 
                 if error != nil {
                     
-                    self.makeAlert(title: "Error", message: error!.localizedDescription )
+                   makeAlert(title: "Error", message: error!.localizedDescription,self: self )
                 }
                 else {
                     
@@ -72,7 +72,7 @@ class ViewController: UIViewController {
             
         }
         else {
-            makeAlert(title: "Error", message: "Username/Password?")
+            makeAlert(title: "Error", message: "Username/Password?",self: self)
             
         }
         
