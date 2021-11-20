@@ -15,11 +15,7 @@ class SettingsVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
 
-  
-   
-    
     @IBAction func button(_ sender: Any) {
         
         do {
